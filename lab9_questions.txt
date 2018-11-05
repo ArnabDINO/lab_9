@@ -1,0 +1,242 @@
+1.Output:
+
+  *p3 = S
+  *p3 = T, p3 = 6940
+  *p1 = S, p1 = 6940
+
+2.Option D (*p = 75)
+
+3.The error is that a double pointer points to a character variable which in itself is a mismatch.
+
+4.int main()
+{
+   char blocks[3] = {'A','B','C'};
+   char *ptr = &blocks[0];
+   char temp;
+
+   temp = blocks[0];                   //temp = A
+   temp = *(blocks + 2);               //temp = C
+   temp = *(ptr + 1);                  //temp = B
+   temp = *ptr;                        //temp = A
+
+   ptr = blocks + 1;                   //ptr = 4435
+   temp = *ptr;                        //temp = B
+   temp = *(ptr + 1);                  //temp = C
+
+   ptr = blocks;                       //ptr = 4434
+   temp = *++ptr;                      //temp = B
+   temp = ++*ptr;                      //temp = C
+   temp = *ptr++;                      //temp = C
+   temp = *ptr;                        //temp = C
+
+   return 0;
+}
+
+
+
+
+
+5.
+Write a piece of code which prints the characters in a cstring in a reverse order.
+
+char s[10] = "abcde";
+char* cptr;
+
+// WRITE YOUR CODE HERE
+
+for(int i=5;i<10;i++)
+{
+	s[i]=*cptr;
+	cptr++;
+}
+
+for(int i=5;i<10;i++)
+{
+	cout<<s[i];
+}
+
+6.
+Write a function countEven(int*, int) which receives an integer array and its size, and returns the number of even numbers in the array.  
+
+int coutEven(int* a,int n)
+{
+	int c=0;
+
+	for(int i=0;i<n;i++)
+	{
+		if(a[i]%2==0)
+		{
+			c++;
+		}
+	}
+
+	return c;
+}
+
+7.
+Write a function that returns a pointer to the maximum value of an array of double's.  If the array is empty, return NULL.
+
+double* maximum(double* a, int size);
+double* maximum(double*a, int size)
+{
+	for(int i=0;i<size;i++)
+	{
+		if(a[i]>a[max])
+		{
+			max=i;
+		}
+	}
+
+	for(int i=0;i<max;i++)
+	{
+		a++;
+	}
+
+	return a;
+}
+
+8.
+Write a function myStrLen(char*) which returns the length of the parameter cstring.  Write the function without using the C++ function strlen.
+
+int myStrLen(char* s)
+{
+	int c=0;
+	for(int i=0; *s!='\0';i++)
+	{
+		c++;
+	}
+	return c;		
+
+}
+
+9.
+Write a function contains(char*, char) which returns true if the 1st parameter cstring contains the 2nd parameter char, or false otherwise.
+
+bool contain(char* s,char c)
+{
+	for(int i=0;*s!='\0';i++)
+	{
+		if(*s==c)
+		{
+			return true;
+		}
+		s++;
+	}
+}
+
+10.
+Write a function revString(char*) which reverses the parameter cstring.  The function returns nothing.  You may use C++ string handling functions in <cstring> in the function if you wish.
+
+int main()
+{
+  char s[10] = "abcde";
+  revString(s);  // call the function
+  return 0;
+}
+
+void revtString(char* ptr)
+{
+// WRITE YOUR CODE HERE
+}
+
+char* pStart, *End;
+    int length;
+    char temp;
+char* pStart, *pEnd;
+    int length;
+    char temp;
+
+    length = strlen(string);
+
+    pStart = string;
+    pEnd = &string[length - 1];1.Output:
+  *p3 = S
+  *p3 = T, p3 = 6940
+  *p1 = S, p1 = 6940
+
+
+2.Option D (*p = 75)
+
+3.The error is that a double pointer points to a character variable which in itself is a mismatch.
+
+4.
+int main()
+{
+   char blocks[3] = {'A','B','C'};
+   char *ptr = &blocks[0];
+   char temp;
+
+   temp = blocks[0];                   //temp = A
+   temp = *(blocks + 2);               //temp = C
+   temp = *(ptr + 1);                  //temp = B
+   temp = *ptr;                        //temp = A
+
+   ptr = blocks + 1;                   //ptr = 4435
+   temp = *ptr;                        //temp = B
+   temp = *(ptr + 1);                  //temp = C
+
+   ptr = blocks;                       //ptr = 4434
+   temp = *++ptr;                      //temp = B
+   temp = ++*ptr;                      //temp = C
+   temp = *ptr++;                      //temp = C
+   temp = *ptr;                        //temp = C
+
+   return 0;
+}
+
+    while(pStart < pEnd)
+    {
+        temp = *pStart;
+        *pStart = *pEnd;
+        *pEnd = temp;
+        pStart++;
+        pEnd--;
+ length = strlen(string);
+
+    pStart = string;
+    pEnd = &string[length - 1];
+
+    while(pStart < pEnd)
+    {
+        temp = *pStart;
+        *pStart = *pEnd;
+        *pEnd = temp;
+        pStart++;
+        pEnd--;
+    }
+
+1.
+Output:
+
+  *p3 = S
+  *p3 = T, p3 = 6940
+  *p1 = S, p1 = 6940
+
+2.Option D (*p = 75)
+
+3.The error is that a double pointer should not point to a character variable which in itself is a mismatch.
+
+4.
+int main()
+{
+   char blocks[3] = {'A','B','C'};
+   char *ptr = &blocks[0];
+   char temp;
+
+   temp = blocks[0];                   //temp = A
+   temp = *(blocks + 2);               //temp = C
+   temp = *(ptr + 1);                  //temp = B
+   temp = *ptr;                        //temp = A
+  
+   ptr = blocks + 1;                   //ptr = 4435
+   temp = *ptr;                        //temp = B
+   temp = *(ptr + 1);                  //temp = C
+
+   ptr = blocks;                       //ptr = 4434
+   temp = *++ptr;                      //temp = B
+   temp = ++*ptr;                      //temp = C
+   temp = *ptr++;                      //temp = C
+   temp = *ptr;                        //temp = C
+
+   return 0;
+}
