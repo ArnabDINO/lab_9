@@ -97,8 +97,8 @@ int mystrcmp(char *str1,char *str2)
 
     for(int i=0;i<l;i++)
         {
-            int m=(int)(str[i]);
-            int n=(int)(str[i]);
+            int m=(int)(str1[i]);
+            int n=(int)(str2[i]);
             d=m-n;
 
             if(d!=0)
